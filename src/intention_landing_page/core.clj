@@ -32,6 +32,7 @@
 
 
 (defn main [& args]
+  (println "Running...")
   (spit "public/index.html" (h/html page)))
 
 (main)
