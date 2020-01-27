@@ -70,6 +70,20 @@
       [:a {:target "_blank" :href "http://www.scielo.br/pdf/refuem/v24n2/01.pdf"} "here"] ", and "
       [:a {:target "_blank" :href "https://www.sciencedirect.com/science/article/pii/S0065260106380021"} "here."]]]]])
 
+(def support
+  (let [contacts [{:icon "fa fa-twitter"
+                   :href "https://twitter.com/DWMartin41"}
+                  {:icon "fa fa-envelope"
+                   :href "mailto:mail@davemartin.me?subject=Intention"}]]
+    [:section {:class "py-5 support"}
+     [:h2 {:class "text-center pb-3 display-4"} "Support"]
+     [:div.contacts
+      (for [contact contacts]
+        [:a {:href (:href contact)
+             :class "btn btn-outline-primary contact"
+             :target "_blank"}
+         [:i {:class (str (:icon contact) " fa-3x")}]])]]))
+
 (def page
   [:html
    head
@@ -78,7 +92,8 @@
     [:div {:class "container"}
      hero
      what-is-it
-     features]]])
+     features
+     support]]])
 
 
 (defn main [& args]
