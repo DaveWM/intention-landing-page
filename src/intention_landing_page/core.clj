@@ -21,8 +21,8 @@
 (def hero
   [:section {:class "row py-5 align-items-center justify-content-center"}
    [:div {:class "col-md-4 text-center text-md-left"}
-    [:h1 {:class "display-4"} "Intention"]
-    [:p "Plan and Achieve your Goals with Intention"]
+    [:h1 {:class "display-3"} "Intention"]
+    [:p.lead "Plan and Achieve your Goals with Intention"]
     [:a {:href app-url
          :class "btn btn-large btn-primary"}
      "Get Started"]]
@@ -40,14 +40,35 @@
               {:logo "fa fas fa-trophy"
                :title "Achieve"
                :description "Achieve your goals faster and more reliably"}]]
-    [:div {:class "py-5"}
-     [:h2 {:class "text-center pb-3"} "Features"]
+    [:section {:class "py-5"}
+     [:h2 {:class "text-center pb-3 display-4"} "Features"]
      [:div {:class "row align-items-top features"}
       (for [d data]
         [:div {:class "feature col-md col-sm-12 text-center"}
          [:div.icon [:i {:class (str (:logo d) " fa-3x")}]]
-         [:h4 (:title d)]
-         [:p (:description d)]])]]))
+         [:h3 (:title d)]
+         [:p.lead (:description d)]])]]))
+
+(def what-is-it
+  [:section {:class "py-5 what-is-it"}
+   [:div.row {:class "align-items-center"}
+    [:div {:class "col-md-5 col-sm-12"}
+     [:img.diagram {:src "images/intention-dag.png"}]]
+    [:div {:class "col-md-7 col-sm-12"}
+     [:h2.pb-3.display-4 "What is Intention?"]
+     [:p.lead
+      "We all want to achieve certain things in life - you may want to start your own company, lose some weight, or become a millionaire.
+       For most of us, goals like this are too big and daunting - where do you even begin? Intention can help you plan and achieve these goals."]
+     [:p.lead
+      "Intention helps you to break down your goals into actionable tasks, and visualise them in a diagram.
+       You do this by arranging your goals and tasks (" [:i "intentions"] ") into a graph - an arrangement where each intention can depend on multiple other intentions.
+       This allows you to easily see how small tasks relate to your high-level goals, and gives you visual feedback of how you are progressing."]
+     [:p.lead
+      "The acts of writing down your goals, splitting them up into manageable tasks, and getting feedback on your progress make it much more likely that you'll achieve your goals.
+       This is supported by psychology research - see "
+      [:a {:target "_blank" :href "https://www.dominican.edu/academics/lae/undergraduate-programs/psych/faculty/assets-gail-matthews/researchsummary2.pdf"} "here"] ", "
+      [:a {:target "_blank" :href "http://www.scielo.br/pdf/refuem/v24n2/01.pdf"} "here"] ", and "
+      [:a {:target "_blank" :href "https://www.sciencedirect.com/science/article/pii/S0065260106380021"} "here."]]]]])
 
 (def page
   [:html
@@ -56,6 +77,7 @@
     navbar
     [:div {:class "container"}
      hero
+     what-is-it
      features]]])
 
 
