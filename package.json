@@ -1,0 +1,27 @@
+{
+  "name": "intention-landing-page",
+  "version": "1.0.0",
+  "description": "A Clojure library designed to ... well, that part is up to you.",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "sass": "sass styles/main.scss public/styles/main.css --style compressed",
+    "sass-watch": "sass styles/main.scss public/styles/main.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DaveWM/intention-landing-page.git"
+  },
+  "author": "David Martin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DaveWM/intention-landing-page/issues"
+  },
+  "homepage": "https://github.com/DaveWM/intention-landing-page#readme",
+  "dependencies": {
+    "bootstrap": "^4.4.1",
+    "sass": "^1.25.1-test.1"
+  }
+}

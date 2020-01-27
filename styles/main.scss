@@ -1,0 +1,40 @@
+// Your variable overrides
+$primary: hsl(171, 100%, 41%);
+
+// Bootstrap and its default variables
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+@font-face {
+  font-family: Ailerons;
+  src: url("/fonts/Ailerons-Typeface.otf") format("opentype");
+}
+
+section {
+  border-bottom: 1px solid lightgray;
+}
+
+nav {
+  .navbar-brand {
+    font-size: 30px;
+    font-family: 'Ailerons', serif;
+    .logo {
+      height: 28px;
+      margin-right: 8px;
+    }
+  }
+}
+
+.features {
+  justify-content: center;
+  .feature {
+    max-width: 300px;
+    .icon {
+      height: 70px;
+      margin-bottom: 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: $primary;
+    }
+  }
+}
