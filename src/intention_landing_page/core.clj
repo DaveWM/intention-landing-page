@@ -12,7 +12,9 @@
            :href "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"}]
    [:link {:rel :icon
            :href "favicon.ico"}]
-   [:title "Intention"]])
+   [:title "Intention"]
+   [:meta {:name "viewport"
+           :content "width=device-width, initial-scale=1"}]])
 
 (def navbar
   [:nav {:class "navbar navbar-light bg-primary"}
