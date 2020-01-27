@@ -29,7 +29,7 @@
     [:a {:href app-url
          :class "btn btn-large btn-primary"}
      "Get Started"]]
-   [:div {:class "col-md"}
+   [:div {:class "col-md-8"}
     [:img {:src "/images/on-phone.png"
            :width "100%"}]]])
 
@@ -47,17 +47,17 @@
      [:h2 {:class "text-center pb-3 display-4"} "Features"]
      [:div {:class "row align-items-top features"}
       (for [d data]
-        [:div {:class "feature col-md col-sm-12 text-center"}
+        [:div {:class "feature col-md text-center"}
          [:div.icon [:i {:class (str (:logo d) " fa-3x")}]]
          [:h3 (:title d)]
-         [:p.lead (:description d)]])]]))
+         [:p.lead.description (:description d)]])]]))
 
 (def what-is-it
   [:section {:class "py-5 what-is-it"}
    [:div.row {:class "align-items-center"}
-    [:div {:class "col-md-5 col-sm-12"}
+    [:div {:class "col-md-5"}
      [:img.diagram {:src "images/intention-dag.png"}]]
-    [:div {:class "col-md-7 col-sm-12"}
+    [:div {:class "col-md-7"}
      [:h2.pb-3.display-4 "What is Intention?"]
      [:p.lead
       "We all want to achieve certain things in life - you may want to start your own company, lose some weight, or become a millionaire.
