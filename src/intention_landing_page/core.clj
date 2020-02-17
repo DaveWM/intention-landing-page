@@ -29,7 +29,7 @@
     [:h1 {:class "display-3"} "Intention"]
     [:p.lead "Plan and Achieve your Goals with Intention"]
     [:a {:href app-url
-         :class "btn btn-large btn-primary"}
+         :class "btn btn-primary btn-lg"}
      "Get Started"]]
    [:div {:class "col-md-8"}
     [:img {:src "/images/on-phone.png"
@@ -75,6 +75,17 @@
       [:a {:target "_blank" :href "http://www.scielo.br/pdf/refuem/v24n2/01.pdf"} "here"] ", and "
       [:a {:target "_blank" :href "https://www.sciencedirect.com/science/article/pii/S0065260106380021"} "here."]]]]])
 
+(def donate
+  (let [bmc-btn [:a.bmc-button {:target "_blank" :href "https://www.buymeacoffee.com/davewm"} [:img {:src "https://cdn.buymeacoffee.com/buttons/bmc-new-btn-logo.svg" :alt "Buy me a coffee"}] [:span {:style "margin-left:15px;font-size:28px !important;"} "Buy me a coffee"]]]
+    [:section {:class "py-5 donate"}
+     [:h2 {:class "text-center pb-3 display-4"} "Donate"]
+     [:div.row.align-items-center.justify-content-around
+      [:div.col-md-6
+       [:p.lead "Intention is developed and maintained by a sole developer.
+     If you like Intention, please consider donating a small amount towards its development. Thank you."]]
+      [:div.col-md-6.text-center.text-md-left
+       bmc-btn]]]))
+
 (def support
   (let [contacts [{:icon "fa fa-twitter"
                    :href "https://twitter.com/DWMartin41"}
@@ -98,6 +109,7 @@
      hero
      what-is-it
      features
+     donate
      support]]])
 
 
