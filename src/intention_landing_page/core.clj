@@ -36,7 +36,7 @@ fathom('trackPageview');"])
 
 (def navbar
   [:nav {:class "navbar navbar-light bg-primary"}
-   [:a {:class "navbar-brand text-light" :href "#"}
+   [:a {:class "navbar-brand text-light" :href "/"}
     [:img {:src "/images/logo-white.svg" :class "logo"}]
     "Intention"]
    [:a {:href app-url :class "btn btn-light"} "Go to App"]])
@@ -47,11 +47,11 @@ fathom('trackPageview');"])
     [:h1 {:class "display-3"} "Intention"]
     [:p.lead "Plan and Achieve your Goals with Intention"]
     [:div.row.justify-center.align-items-center
-     [:div.col-6
+     [:div.col
       [:a {:href app-url
            :class "btn btn-primary btn-lg"}
        "Get Started"]]
-     [:div.col-6 play-store-badge]]]
+     [:div.col play-store-badge]]]
    [:div {:class "col-md-8"}
     [:img {:src "/images/on-phone.png"
            :width "100%"}]]])
@@ -121,10 +121,16 @@ fathom('trackPageview');"])
              :target "_blank"}
          [:i {:class (str (:icon contact) " fa-3x")}]])]]))
 
-(def page
+(def guide-fab
+  [:a {:href "/guide.html"
+       :class "btn btn-primary fab shadow"}
+   [:i.fa.fa-3x.fa-question]])
+
+(def home-page
   [:html
    head
    [:body
+    guide-fab
     navbar
     [:div {:class "container"}
      hero
@@ -133,9 +139,66 @@ fathom('trackPageview');"])
      donate
      support]]])
 
+(def guide-page
+  [:html
+   head
+   [:body
+    navbar
+    [:div.container.guide
+     [:h2.mt-4.mb-4 "Guide"]
+     [:p.lead
+      "Welcome to the walkthrough guide, let's get started with Intention!
+      The core concept of Intention is that you enter your " [:i "intentions"] " (i.e. goals or tasks), and link it to other intentions.
+      For example, you may want to run a marathon, but you have to get fit first - your intention to run a marathon " [:i "depends on"] " your intention to get fit. "
+      "Together, your intentions form a " [:i "graph"] " - a connected web of intentions.
+      Lets walk through how to use the app, which should make it clearer how it works."]
+     [:p.lead
+      "To start, open up the Intention app at " [:a {:href "https://i.ntention.app" :target "_blank"} "https://i.ntention.app"] ". "
+      "Once you've logged in, you should see a page like this:"]
+     [:img {:src "/images/guide/step-1.png"}]
+     [:p.lead
+      "Click \"New Intention\", which will bring you onto a new page. You're going to create your top-level intention, your ultimate goal, so give it quite a vague title. Fill out the details like so:"]
+     [:img {:src "/images/guide/step-2.png"}]
+     [:p.lead
+      "Click save, and you should see a popup saying the intention saved successfully. The page should now look like this:"]
+     [:img {:src "/images/guide/step-3.png"}]
+     [:p.lead
+      "Now let's add another intention. I'm going to use the example of running a marathon, but you can substitute another intention if you'd like.
+      Click the \"Add Sub-Task\" button at the bottom of the page."]
+     [:p.lead
+      "Let's call our new intention \"Run a Marathon\". Fill out the title, and the page should look like this:"]
+     [:img {:src "/images/guide/step-4.png"}]
+     [:p.lead
+      "Notice that \"Achieve my Goals\" is selected as the " [:i "parent"] " intention. This means that in order to achieve your goals, you have to run a marathon.
+      All intentions, apart from the first one, have to have a parent. "]
+     [:p.lead "Click save, then click \"Add Sub-Task\". Let's add another intention to \"Get fit\", which we'll need to do before we can run a marathon."]
+     [:p.lead "Once you've filled in the form and saved the new intention, the screen should look like this:"]
+     [:img {:src "/images/guide/step-5.png"}]
+     [:p.lead
+      "Now we need to add another intention to \"Find a local marathon\".
+       We need to do this in order to run a marathon, but not to get fit.
+       Therefore, we want to create another intention with the parent of \"Run a Marathon\".
+       To do this, we can create a \"sibling\" intention of \"Get Fit\".
+       A \"sibling\" is an intention with the same parents - in this case, something else we need to do to run a marathon."]
+     [:p.lead
+      "Click \"Add Sibling\", then create a new intention called \"Buy New Running Gear\".
+       Once you've done this, navigate back to the home page (you can click on the \"Intention\" logo to do this).
+       You should see a list of the intentions we've created, like this:"]
+     [:img {:src "/images/guide/step-6.png"}]
+     [:p.lead
+      "This is nice, but the real power of Intention is in visualising how your intentions fit together.
+       Click on the \"Graph\" tab, and you should see a diagram like this:"]
+     [:img {:src "/images/guide/step-7.png"}]
+     [:p.lead
+      "Nice! This is all you need to know to use intention."]
+     [:p.lead.mb-5
+      "Thanks for reading.
+       If you get stuck, or have any comments or feedback, please email me at " [:a {:href "mailto:mail@davemartin.me"} "mail@davemartin.me"] "."]]]])
+
 
 (defn main [& args]
   (println "Running...")
-  (spit "public/index.html" (h/html page)))
+  (spit "public/index.html" (h/html home-page))
+  (spit "public/guide.html" (h/html guide-page)))
 
 (main)
