@@ -17,6 +17,10 @@
 fathom('set', 'siteId', 'XVASS');
 fathom('trackPageview');"])
 
+(def play-store-badge
+  [:a.play-badge {:href "https://play.google.com/store/apps/details?id=com.davidmartin.intention&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1"}
+   [:img {:alt "Get it on Google Play" :src "https://play.google.com/intl/en_gb/badges/static/images/badges/en_badge_web_generic.png"}]])
+
 (def head
   [:head
    [:link {:rel :stylesheet
@@ -42,9 +46,12 @@ fathom('trackPageview');"])
    [:div {:class "col-md-4 text-center text-md-left"}
     [:h1 {:class "display-3"} "Intention"]
     [:p.lead "Plan and Achieve your Goals with Intention"]
-    [:a {:href app-url
-         :class "btn btn-primary btn-lg"}
-     "Get Started"]]
+    [:div.row.justify-center.align-items-center
+     [:div.col-6
+      [:a {:href app-url
+           :class "btn btn-primary btn-lg"}
+       "Get Started"]]
+     [:div.col-6 play-store-badge]]]
    [:div {:class "col-md-8"}
     [:img {:src "/images/on-phone.png"
            :width "100%"}]]])
