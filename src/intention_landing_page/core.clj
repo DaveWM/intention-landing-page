@@ -39,7 +39,7 @@ fathom('trackPageview');"])
    [:a {:class "navbar-brand text-light" :href "#"}
     [:img {:src "/images/logo-white.svg" :class "logo"}]
     "Intention"]
-   [:a {:href app-url :class "btn btn-outline-light"} "Go to App"]])
+   [:a {:href app-url :class "btn btn-light"} "Go to App"]])
 
 (def hero
   [:section {:class "row py-5 align-items-center justify-content-center"}
