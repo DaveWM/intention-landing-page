@@ -29,7 +29,9 @@ fathom('trackPageview');"])
            :href "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"}]
    [:link {:rel :icon
            :href "favicon.ico"}]
-   [:title "Intention"]
+   [:title "Intention - Achieve your Goals"]
+   [:meta {:name "description"
+           :content "Intention is a mobile and web app that helps you achieve your goals, by breaking them down into actionable tasks and visualising them in a diagram."}]
    [:meta {:name "viewport"
            :content "width=device-width, initial-scale=1"}]
    fathom-script])
