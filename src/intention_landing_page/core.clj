@@ -92,10 +92,14 @@ fathom('trackPageview');"])
        This allows you to easily see how small tasks relate to your high-level goals, and gives you visual feedback of how you are progressing."]
      [:p.lead
       "The acts of writing down your goals, splitting them up into manageable tasks, and getting feedback on your progress make it much more likely that you'll achieve your goals.
-       This is supported by psychology research - see "
-      [:a {:target "_blank" :href "https://www.dominican.edu/academics/lae/undergraduate-programs/psych/faculty/assets-gail-matthews/researchsummary2.pdf"} "here"] ", "
-      [:a {:target "_blank" :href "http://www.scielo.br/pdf/refuem/v24n2/01.pdf"} "here"] ", and "
-      [:a {:target "_blank" :href "https://www.sciencedirect.com/science/article/pii/S0065260106380021"} "here."]]]]])
+       This is supported by psychology research:"]
+     [:ul
+      [:li [:a {:target "_blank" :href "https://www.dominican.edu/sites/default/files/2020-02/gailmatthews-harvard-goals-researchsummary.pdf"}
+            "Goals Research Summary (Gail Matthews)"]]
+      [:li [:a {:target "_blank" :href "http://www.scielo.br/pdf/refuem/v24n2/01.pdf"}
+            "Goal Setting in Sport and Exercise: Research and Practical Application (2013, Robert S. Weinberg)"]]
+      [:li [:a {:target "_blank" :href "https://www.sciencedirect.com/science/article/pii/S0065260106380021"}
+            "Implementation Intentions and Goal Achievement: A Meta‐analysis of Effects and Processes (2006, Peter M. Gollwitzer and Paschal Sheeran)"]]]]]])
 
 (def donate
   (let [bmc-btn [:a.bmc-button {:target "_blank" :href "https://www.buymeacoffee.com/davewm"} [:img {:src "https://cdn.buymeacoffee.com/buttons/bmc-new-btn-logo.svg" :alt "Buy me a coffee"}] [:span {:style "margin-left:15px;font-size:28px !important;"} "Buy me a coffee"]]]
