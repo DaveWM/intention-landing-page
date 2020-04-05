@@ -46,11 +46,12 @@ fathom('trackPageview');"])
    [:div {:class "col-md-4 text-center text-md-left"}
     [:h1 {:class "display-3"} "Intention"]
     [:p.lead "Plan and Achieve your Goals with Intention"]
+    [:p {:style "opacity: 0.7"} "Available on Android and Web"]
     [:div.row.justify-center.align-items-center
      [:div.col
       [:a {:href app-url
            :class "btn btn-primary btn-lg"}
-       "Get Started"]]
+       "Web App"]]
      [:div.col play-store-badge]]]
    [:div {:class "col-md-8"}
     [:img {:src "/images/hero-image.png"
