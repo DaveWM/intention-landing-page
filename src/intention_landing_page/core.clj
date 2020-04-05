@@ -53,7 +53,7 @@ fathom('trackPageview');"])
        "Get Started"]]
      [:div.col play-store-badge]]]
    [:div {:class "col-md-8"}
-    [:img {:src "/images/on-phone.png"
+    [:img {:src "/images/hero-image.png"
            :width "100%"}]]])
 
 (def features
