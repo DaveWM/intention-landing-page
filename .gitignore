@@ -14,3 +14,5 @@ pom.xml.asc
 node_modules/
 /public/styles/
 /public/index.html
+/public/guide.html
+/public/privacy-policy.html
